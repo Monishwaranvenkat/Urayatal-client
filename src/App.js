@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import PrivateRoutes from './Components/PrivateRoutes'
+import Login from './pages/Login'
+import Signup from "./pages/Signup";
+import ChatHome from "./pages/ChatHome"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<div className='appbody'>
+				<Router>
+					<Routes>
+						<Route path='/' element={<Login />}></Route>
+						<Route path='/login' element={<Login />}></Route>
+						<Route path='/signup' element={<Signup />}></Route>
+						<Route element={<PrivateRoutes />}>
+							<Route path='/chat' element={<ChatHome />} />
+						</Route>
+					</Routes>
+				</Router>
+			</div>
+		</div>
+	);
 }
 
 export default App;

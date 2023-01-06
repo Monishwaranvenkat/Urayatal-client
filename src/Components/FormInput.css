@@ -1,0 +1,42 @@
+.formInput{
+	padding: 0;
+	margin: 1em 0px;
+	width: 80%;
+	position: relative;
+
+}
+
+.formInput> input {
+	font-weight: 700;
+	outline: none;
+	background-color: #3c3c3d;
+	border-radius: 2em;
+	border: none;
+	text-align: center;
+	color: #ffff;
+	cursor: pointer;
+    padding: 10px;
+	width: 100%;
+	position: relative;
+	height: 2em;
+}
+
+
+.formInput>input:focus {
+	border: 1px solid #00bbffdb;
+}
+
+.formInput >span {
+	position: absolute;
+	color: red;
+	font-size: .8rem;
+	margin: 8px;
+	left:3em;
+	display: none;
+}
+
+.formInput>input:invalid ~ span
+{
+	display: block;
+}
+

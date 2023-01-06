@@ -1,0 +1,97 @@
+.form-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+	font-size: 1.2rem;
+	font-weight: 500;
+	background-color: #272525;
+	position: absolute;
+	/* top:30px */
+}
+.form-container>form{
+	align-items: center;
+	margin: auto;
+}
+
+.form{
+    background-color: #272525;
+	z-index: 2em;
+	border-radius: 5px;
+	width: 40vw;
+	height: auto;
+	margin-top:3em;
+	margin-bottom:3em;
+	position: relative;
+	box-shadow: 0 0.188em 1.55em #0c0b0b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    padding: 1em;
+	/* justify-content: space-around; */
+}
+
+.form a {
+    margin: 10px;
+	font-size: 0.7rem;
+	color: aqua;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+}
+
+.submit-button {
+	margin: 1em;
+	background-color: #00bbffdb;
+	border: none;
+	color: rgba(175, 8, 8, 0.671);
+	width: 6em;
+	height: 3em;
+	border-radius: 3em;
+	cursor: pointer;
+}
+
+.submit-button:hover {
+	border: 1px solid #ffff;
+}
+.submit-button:disabled{
+	background-color: #3c3c3d;
+}
+.submit-button:disabled:hover {
+	border: none;
+}
+
+.form > h1 {
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 1;
+	color: #c6e2ff;
+	animation: neon 0.2s ease-in-out infinite alternate;
+}
+
+.err-msg{
+    color: red;
+    font-size: 0.7rem;
+    
+}
+.hide{
+    display: none;
+}
+
+
+
+
+@keyframes neon {
+	from {
+		text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+			0 0 25px rgba(202, 228, 211, 0.34), 0 0 12px rgba(242, 150, 30, 0.52),
+			0 0 21px rgba(250, 58, 10, 0.92), 0 0 34px rgba(112, 230, 16, 0.78),
+			0 0 50px rgba(18, 233, 54, 0.92);
+	}
+	to {
+		text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+			0 0 25px rgba(202, 228, 225, 0.42), 0 0 12px rgba(242, 203, 30, 0.58),
+			0 0 22px rgba(242, 30, 30, 0.84), 0 0 34px rgba(242, 30, 30, 0.88),
+			0 0 55px rgb(221, 69, 8);
+	}
+}
